@@ -1,0 +1,177 @@
+.bgcolor{
+    background: var(--secondary-color);
+    color: white;
+
+    text-align: center;
+    padding-block: 40px;
+
+}
+
+
+.span-text{
+    color: var(--primary-color);
+}
+
+.mainsec-text{
+    padding-top: 6px;
+}
+.mainsec-text p{
+    padding-top: 19px;
+    font-size: 14.5px;
+}
+
+.mainsec-bgimg {
+  position: relative;
+  background-image: url('../img/Rectangle 443.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 123vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Overlay effect */
+.mainsec-bgimg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.mainsec-content {
+  position: relative;
+  display: flex;
+  
+
+  padding-inline: 30px;
+  gap: 20px;
+  z-index: 2; 
+}
+
+
+.mainsec-img img {
+  width: 95%;
+  padding-top: 80px;
+  height: auto;
+
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mainsec1-img img{
+      width: 95%;
+  height: auto;
+  border-radius: 10px;
+padding-bottom: 80px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.text-divparent{
+        background: var(--secondary-color);
+    color: white;
+
+    text-align: center;
+   padding-block: 50px;
+}
+
+
+.head-span{
+    color: var(--primary-color);
+}
+
+
+.text-divparent h1{
+    font-size: 38px;
+}
+.text-divparent p{
+    font-size: 13.5px;
+    padding-top: 15px;
+}
+
+
+
+@media (max-width: 1024px) {
+    .mainsec-content {
+        gap: 15px;
+        padding-inline: 15px;
+    }
+
+    .mainsec-bgimg {
+        height: 100vh;
+    }
+
+    .text-divparent h1 {
+        font-size: 32px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .mainsec-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding-inline: 10px;
+    }
+
+    .mainsec-bgimg {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .mainsec-img img,
+    .mainsec1-img img {
+        width: 75%;
+        padding: 0;
+    }
+
+    .mainsec-text h1 {
+        font-size: 24px;
+    }
+
+    .mainsec-text p {
+        font-size: 13px;
+    }
+
+    .text-divparent h1 {
+        font-size: 26px;
+        line-height: 1.4;
+    }
+
+    .text-divparent p {
+        font-size: 12.5px;
+    }
+}
+
+/* Extra small mobile screens */
+@media (max-width: 480px) {
+    .mainsec-text h1 {
+        font-size: 20px;
+    }
+
+    .mainsec-text p {
+        font-size: 12px;
+    }
+
+    .text-divparent h1 {
+        font-size: 22px;
+    }
+
+    .text-divparent p {
+        font-size: 9px;
+        padding-inline: 10px;
+    }
+        .mainsec-img img, .mainsec1-img img {
+        width: 72%;}
+}

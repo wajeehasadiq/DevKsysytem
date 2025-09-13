@@ -1,0 +1,146 @@
+.grow-sec-div{
+    display: flex;
+}
+
+.grow-first-div{
+    display: flex;
+    gap: 70px;
+   justify-content: center;
+}
+
+.grow-main-div{
+    background: var(--secondary-color);
+    color: white;
+    padding-block: 60px;
+}
+
+.ceoimg img{
+width: 100%;
+height: 70vh;
+}
+
+.ceo1img img{
+    width: 100%;
+height: 65vh;
+}
+
+.grow-text{
+    align-items: center;
+    padding-top: 10px;
+}
+
+
+.grow-text p{
+    font-size: 12px;
+    padding-top: 25px;
+    line-height: 18px;
+
+}
+
+.grow-spandiv{
+    color: var(--primary-color);
+}
+
+.grow-text h1{
+    font-size: 38px;
+}
+
+.grow-btn{
+    padding-top: 20px;
+}
+
+.grow-btn button{
+    width: 135px;
+    height:6.5vh;
+    border-radius: 20px;
+    background-color: #FFCC24;
+    color: black;
+}
+@media (max-width: 1024px) {
+    .grow-first-div {
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .ceoimg img,
+    .ceo1img img {
+        height: 55vh;
+    }
+
+    .grow-text h1 {
+        font-size: 32px;
+    }
+
+    .grow-text p {
+        font-size: 11px;
+        line-height: 17px;
+    }
+}
+
+/* For tablets (portrait mode) */
+@media (max-width: 768px) {
+    .grow-sec-div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grow-first-div {
+        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ceoimg img,
+    .ceo1img img {
+        height: 50vh;
+    }
+
+    .grow-text h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .grow-text p {
+        text-align: center;
+        font-size: 11px;
+        padding-top: 15px;
+    }
+
+    .grow-btn {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* For small mobile devices */
+@media screen and (max-width: 480px) {
+    .grow-main-div {
+        padding-block: 30px;
+    }
+
+    .grow-first-div {
+        gap: 20px;
+    }
+
+    .ceoimg img,
+    .ceo1img img {
+        height: 40vh;
+    }
+
+    .grow-text h1 {
+        font-size: 22px;
+    }
+
+    .grow-text p {
+        font-size: 10px;
+        line-height: 16px;
+        padding-top: 10px;
+    }
+
+    .grow-btn button {
+        width: 110px;
+        height: 3.5vh;
+        font-size: 12px;
+      margin-bottom: 10px;
+    }
+}

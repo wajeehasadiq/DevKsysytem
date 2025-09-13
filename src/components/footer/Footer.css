@@ -1,0 +1,176 @@
+.footer {
+  background: #000; 
+  color: #fff;
+  padding: 50px 5%; 
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; 
+  flex-wrap: wrap;
+  gap: 50px !important; 
+}
+.middle{
+  flex: 1;
+  min-width: 250px;
+  display: flex;
+  flex-direction: row; 
+   margin-left:160px;
+    gap:130px !important;
+    margin-top: 20px;
+}
+.footer-section {
+  gap: 10px; 
+
+}
+
+
+.footer-top {
+
+  align-items: flex-start;
+  gap: 90px;
+}
+
+.footer-logo img {
+  width: 60px;
+  height: auto;
+}
+
+.footer-top p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 340px;
+  margin-top: 20px;
+}
+
+/* Section Titles */
+.footer-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.middle p{
+    line-height: 45px;
+    font-size: 14px;
+}
+
+/* Glitter Hover */
+.footer-section h3:hover,
+.footer-section p:hover {
+  background: linear-gradient(90deg, #a855f7, #ffffff, #a855f7);
+  background-size: 200% auto;
+  -webkit-background-clip: text;       
+  -webkit-text-fill-color: transparent; 
+  animation: glitter 1.5s linear infinite;
+}
+
+@keyframes glitter {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+
+/* Social Icons */
+.social-icons {
+  display: flex !important;
+  gap: 19px !important; /* ✅ equal gap between icons */
+  margin-top: 20px !important; /* ✅ equal spacing below paragraph */
+  /* margin-left: 150px !important; */
+}
+
+.social-icons a {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+/* Brand Colors */
+.social-icons a:nth-child(1) { color: #E4405F; } /* Instagram */
+.social-icons a:nth-child(2) { color: #25D366; } /* WhatsApp */
+.social-icons a:nth-child(3) { color: #7a7878; } /* TikTok */
+.social-icons a:nth-child(4) { color: #1877F2; } /* Facebook */
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+/* Sticky LinkedIn */
+.sticky-linkedin {
+  position: fixed;
+  bottom: 70px;
+  right: 25px;
+  font-size: 40px;
+  color: #0e76a8;
+z-index: 999999;
+  /* border-radius: 50%; */
+  padding: 8px;
+  /* box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, background 0.3s ease; */
+}
+
+/* .sticky-linkedin:hover {
+  background: #0e76a8;
+  color: #fff;
+  transform: scale(1.1);
+} */
+/* ✅ Responsive Fix */
+@media (max-width: 992px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;     /* center all sections */
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .middle {
+    flex-direction: column;
+    margin-left: 0 !important;
+    gap: 30px !important;
+    align-items: center;     /* center business + info */
+    text-align: center;
+  }
+
+  .footer-section {
+    text-align: center;      /* center headings + paragraphs */
+  }
+
+  .social-icons {
+    justify-content: center !important;
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 30px 20px;
+  }
+
+  .footer-logo img {
+    width: 50px;
+  }
+
+  .footer-section h3 {
+    font-size: 16px;
+  }
+  .middle p{
+    line-height: 27px;
+  }
+
+  .social-icons a {
+    font-size:20px;
+}
+}

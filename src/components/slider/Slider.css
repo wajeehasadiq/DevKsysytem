@@ -1,0 +1,156 @@
+.slider-section {
+  background: #000;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.slider-heading {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.slider-heading .purple {
+  color: #a020f0;
+}
+
+.slider-heading .white {
+  color: #fff;
+}
+
+.white{
+    color: var(--primary-color) !important;
+}
+
+.review-btn {
+  background: #a020f0;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  margin-bottom: 40px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.review-btn:hover {
+  background: #8616c5;
+  transform: scale(1.05);
+}
+
+.slider-container {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.review-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.review-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.stars {
+  margin: 10px 0;
+}
+
+.star-icon {
+  color: #ffcc00;
+  font-size: 16px;
+}
+
+.review-text {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.google-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.google-section a {
+  color: #4285f4;
+  text-decoration: none; /* removes underline */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: 0.3s ease;
+}
+
+.google-section a:hover {
+  color: #2a64c8;
+}
+
+.google-icon {
+  font-size: 18px;
+  color: #4285f4;
+}
+
+/* ✅ Responsive tweaks */
+@media (max-width: 768px) {
+  .slider-heading {
+    font-size: 22px;
+  }
+
+  .review-btn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+
+  .review-card {
+    min-height: 220px;
+    padding: 15px;
+  }
+
+  .review-text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-heading {
+    font-size: 20px;
+  }
+
+  .review-btn {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .review-card {
+    padding: 12px;
+}
+}

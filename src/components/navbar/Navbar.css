@@ -1,0 +1,235 @@
+
+:root {
+  --primary-color: #a259ff;   /* Purple */
+  --secondary-color: #ff66c4; /* Pink */
+  --dark-bg: #111;
+  --light-text: #fff;
+  --transition: all 0.3s ease;
+}
+
+
+ *{
+  padding: 0;
+  margin: 0;
+ }
+
+.navbar {
+  width: 100%;
+  background: var(--secondary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+
+  font-size: 14px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade in */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Logo */
+.logo img {
+  height: 35px;
+  width: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover with glow */
+.logo img:hover {
+  transform: scale(1.05); /* slight zoom */
+  filter: drop-shadow(0 0 8px rgba(162, 89, 255, 0.6)); /* purple glow */
+}
+
+/* Center container (links + search) */
+.nav-center {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  transition: var(--transition);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--light-text);
+  font-weight: 300;
+  transition: var(--transition);
+}
+
+.nav-links li a:hover {
+  color: var(--primary-color);
+}
+
+/* Search */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #000;
+  border: 1px solid #666;
+  border-radius: 20px;
+  padding: 8px 10px;
+  transition: all 0.3s ease;
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--secondary-color);
+  font-size: 13px;
+  margin-left: 5px;
+  transition: color 0.3s ease;
+}
+
+.search-icon {
+  color: #ccc;
+  font-size: 13px;
+  transition: color 0.3s ease;
+}
+
+
+.search-box:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(162, 89, 255, 0.6); /* dark purple glow */
+}
+
+.search-box:hover .search-icon {
+  color: var(--primary-color);
+}
+
+.search-box:hover input {
+  color: var(--primary-color);
+}
+
+
+/* Right section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-left: 100px;
+}
+
+.contact-text {
+  position: relative;
+  font-size: 16px;
+  color: #ddd;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+/* underline pseudo-element */
+.contact-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;   /* distance under text */
+  width: 0%;
+  height: 2px;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.contact-text:hover {
+  color: var(--primary-color);
+}
+
+/* animate underline */
+.contact-text:hover::after {
+  width: 100%;
+}
+
+
+/* Button */
+.book-btn {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover with glow */
+.book-btn:hover {
+  background: var(--secondary-color);
+  box-shadow: 0 0 12px rgba(255, 102, 196, 0.6); /* pink glow */
+  transform: translateY(-2px); /* slight lift */
+}
+
+
+/* Toggle (mobile) */
+.menu-toggle {
+  display: none;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav-center {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    background: var(--dark-bg);
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    transition: left 0.4s ease;
+  }
+
+  .nav-center.active {
+    left: 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .search-box {
+    width: 80%;
+    margin-top: 10px;
+  }
+
+  .nav-right {
+    display: none; /* optional: hide right side in mobile */
+  }
+
+  .menu-toggle {
+    display:block !important;
+      margin-left: 500px;
+}
+}
+
+
+@media screen and (max-width:480px) {
+    .menu-toggle {
+    display:block !important;
+    margin-left: 200px;
+}
+  
+}

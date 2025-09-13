@@ -1,0 +1,226 @@
+.input-message textarea {
+    width: 620px;
+    height: 15vh;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    resize: none; 
+    font-size: 14px;
+    font-family: inherit;
+}
+
+
+
+.from-bgimg{
+      position: relative;
+  background-image: url('../img/code.png');
+  background-repeat: no-repeat;
+  background-size: contain; 
+  background-position: center;
+  width: 100%;
+  height:92vh;
+  display: flex;  
+
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+
+
+
+.from-bgimg::before{
+     content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  background-color: rgba(0, 0, 0, 0.6); 
+  z-index: 1;
+}
+
+.from-text{
+  padding-top: 80px;
+    color: white;
+    z-index: 2;
+}
+
+.from-span{
+    color: var(--primary-color);
+}
+
+.from-text h1{
+    font-size: 40px;
+}
+
+.from-text p{
+    font-size: 13px;
+    padding-top: 15px;
+    color: rgb(216, 216, 216);
+    padding-bottom: 10px;
+}
+
+.form-input input{
+    width: 620px;
+    height: 8.5vh;
+    padding-left: 6px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-message input{
+ width: 620px;
+    height: 15vh;
+    padding-left: 6px;
+    margin-top: 10px;
+     border-radius: 5px;
+    border: none;
+     outline: none;
+}
+
+.from-btn{
+text-align: center;
+}
+.from-btn button{
+    margin-top: 10px;
+ width: 620px;
+     border-radius: 5px;
+ height: 8.5vh;
+ background-color: var(--primary-color);
+ color: white;
+ border: none;
+ cursor: pointer;
+} 
+
+
+@media screen and (max-width: 1024px) {
+    .form-input input,
+    .input-message input,
+    .from-btn button {
+        width: 500px;
+    }
+
+    .from-text h1 {
+        font-size: 34px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+   
+    .from-bgimg {
+        height: auto;
+        min-height: 55vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .from-text {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .from-text h1 {
+        font-size:33px;
+        margin-bottom: 8px;
+    }
+
+    .from-text p {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .form-input input,
+    .input-message input {
+        width: 100%; 
+        max-width: 600px; 
+        height: 7vh;
+        font-size: 14px;
+        padding: 8px;
+        margin: 10px auto;
+        display: block;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+    }
+
+
+    .input-message input {
+        height: 12vh;
+    }
+
+ 
+    .from-btn {
+        text-align: center;
+        width: 100%;
+    }
+
+    .from-btn button {
+        width: 100%;
+        max-width: 600px;
+        height: 7vh;
+        margin: 10px auto;
+        display: block;
+        border-radius: 5px;
+        border: none;
+        background-color: var(--primary-color);
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .from-btn button:hover {
+        background-color: #0d6efd;
+        transform: translateY(-3px);
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .form-input input,
+    .input-message input {
+        width: 93%;
+        height: 5vh;
+        font-size: 14px;
+        margin-left: 15px;
+    }
+
+    .from-bgimg {
+        height: auto; /* Auto-adjust based on content */
+        min-height: 55vh; /* Full screen height */
+        width: 100%;
+        background-size: cover; /* Fill background nicely */
+        background-position: center; /* Keep center focus */
+    }
+
+    .input-message input {
+        height: 10vh;
+    }
+
+    .from-btn button {
+        width: 92%;
+        height: 5vh;
+    }
+
+    .from-text h1 {
+        font-size: 22px;
+        padding-left: 15px;
+    }
+
+    .from-text p {
+        font-size: 12px;
+        padding-left: 15px;
+    }
+}
