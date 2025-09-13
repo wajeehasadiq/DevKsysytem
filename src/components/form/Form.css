@@ -187,26 +187,32 @@ text-align: center;
     }
 }
 
-
 @media screen and (max-width: 480px) {
-    .form-input input,
-    .input-message input {
-        width: 93%;
+    .form-input input {
+        width: 92%;
         height: 5vh;
         font-size: 14px;
-        margin-left: 15px;
+    }
+
+    .input-message textarea {
+        width: 92%;   /* same as input & button */
+        height: 12vh; /* taller for better usability */
+        font-size: 14px;
+        padding: 8px;
+        margin: 10px auto;
+        display: block;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        resize: none; /* prevent messy resizing */
     }
 
     .from-bgimg {
-        height: auto; /* Auto-adjust based on content */
-        min-height: 55vh; /* Full screen height */
+        height: auto;
+        min-height: 55vh;
         width: 100%;
-        background-size: cover; /* Fill background nicely */
-        background-position: center; /* Keep center focus */
-    }
-
-    .input-message input {
-        height: 10vh;
+        background-size: cover;
+        background-position: center;
     }
 
     .from-btn button {

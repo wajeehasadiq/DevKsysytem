@@ -145,10 +145,11 @@
     font-size: 20px;
   }
 
-  .review-btn {
-    width: 100%;
-    font-size: 12px;
-  }
+    .review-btn {
+        width: 35%;
+        font-size: 12px;
+        height: 4vh;
+    }
 
   .review-card {
     padding: 12px;

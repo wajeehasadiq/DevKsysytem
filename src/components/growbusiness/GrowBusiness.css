@@ -128,18 +128,18 @@ height: 65vh;
     }
 
     .grow-text h1 {
-        font-size: 22px;
+        font-size: 30px;
     }
 
     .grow-text p {
-        font-size: 10px;
-        line-height: 16px;
+        font-size: 14px;
+        line-height: 21px;
         padding-top: 10px;
     }
 
     .grow-btn button {
-        width: 110px;
-        height: 3.5vh;
+        width: 134px;
+        height: 4.3vh;
         font-size: 12px;
       margin-bottom: 10px;
     }

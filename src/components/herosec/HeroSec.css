@@ -102,14 +102,14 @@
     padding: 10px;
   }
   .herodiv-text h1 {
-    font-size: 22px;
+    font-size: 28px;
     line-height: 1.2;
   }
   .herodiv-text p {
-    font-size: 13px;
+    font-size: 15px;
   }
   .herodiv-text button {
-    padding: 8px 18px;
+    padding: 13px 23px;
     font-size: 13px;
   }
 }

@@ -117,11 +117,11 @@
     }
 
     .cards-mainspan h1 {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .cards-mainspan p {
-        font-size: 12px;
+        font-size: 17px;
         padding-inline: 5px;
     }
 }
