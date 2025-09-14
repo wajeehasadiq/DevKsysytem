@@ -1,25 +1,59 @@
-.bgcolor{
-    background: var(--secondary-color);
-    color: white;
 
-    text-align: center;
-    padding-block: 40px;
 
+
+.man1 img:hover,
+.new-imagess img:hover,
+.mainsec1-img img:hover,
+.mainsec-img img:hover {
+  transform: scale(1.07);   /* slight zoom */
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.9); /* deeper shadow */
+}
+.man-images, 
+.new-imagess {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* space between the images */
+ 
+  padding-top: 75px;
+  z-index: 2;
+  position: relative;
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
 }
 
-
-.span-text{
-    color: var(--primary-color);
+.man1 img,
+.new-imagess img {
+  width: 100%;
+  max-width: 520px;  /* keeps them same width */
+  height: 300px;     /* equal height */
+  object-fit: cover; /* crop without stretching */
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease-in-out;
 }
 
-.mainsec-text{
-    padding-top: 6px;
-}
-.mainsec-text p{
-    padding-top: 19px;
-    font-size: 14.5px;
+/* Text Section */
+.bgcolor {
+  background: var(--secondary-color);
+  color: white;
+  text-align: center;
+  padding-block: 40px;
 }
 
+.span-text {
+  color: var(--primary-color);
+}
+
+.mainsec-text {
+  padding-top: 6px;
+}
+
+.mainsec-text p {
+  padding-top: 19px;
+  font-size: 14.5px;
+}
+
+/* Background with Overlay */
 .mainsec-bgimg {
   position: relative;
   background-image: url('../img/Rectangle 443.png');
@@ -27,14 +61,16 @@
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 123vh;
+  min-height: 100vh; /* fills at least one screen */
+  height: auto;      /* grows with content */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  padding: 50px 20px;
 }
 
-/* Overlay effect */
 .mainsec-bgimg::before {
   content: "";
   position: absolute;
@@ -49,129 +85,149 @@
 .mainsec-content {
   position: relative;
   display: flex;
-  
-
-  padding-inline: 30px;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
-  z-index: 2; 
+  padding-inline: 30px;
+  z-index: 2;
 }
 
-
+/* Apply same style to both images */
+.mainsec1-img img,
 .mainsec-img img {
-  width: 95%;
-  padding-top: 80px;
-  height: auto;
-
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease-in-out;
-}
-
-.mainsec1-img img{
-      width: 95%;
-  height: auto;
+  width: 100%;
+  max-width:520px; /* adjust as needed */
+  height: 75vh;     /* both same height */
+  object-fit: cover;
   border-radius: 10px;
-padding-bottom: 80px;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
   transition: transform 0.3s ease-in-out;
 }
 
-
-.text-divparent{
-        background: var(--secondary-color);
-    color: white;
-
-    text-align: center;
-   padding-block: 50px;
+/* Text Section Below */
+.text-divparent {
+  background: var(--secondary-color);
+  color: white;
+  text-align: center;
+  padding-block: 50px;
 }
 
-
-.head-span{
-    color: var(--primary-color);
+.head-span {
+  color: var(--primary-color);
 }
 
-
-.text-divparent h1{
-    font-size: 38px;
-}
-.text-divparent p{
-    font-size: 13.5px;
-    padding-top: 15px;
+.text-divparent h1 {
+  font-size: 38px;
 }
 
+.text-divparent p {
+  font-size: 13.5px;
+  padding-top: 15px;
+}
 
+/* ================== MEDIA QUERIES ================== */
 
+/* Large tablets / smaller laptops */
 @media (max-width: 1024px) {
-    .mainsec-content {
-        gap: 15px;
-        padding-inline: 15px;
-    }
+  .mainsec-content {
+    gap: 15px;
+    padding-inline: 15px;
+  }
 
-    .mainsec-bgimg {
-        height: 100vh;
-    }
+  .mainsec-bgimg {
+    min-height: 100vh;
+    height: auto;
+  }
 
-    .text-divparent h1 {
-        font-size: 32px;
-    }
+  .text-divparent h1 {
+    font-size: 32px;
+  }
+
+  .mainsec1-img img,
+  .mainsec-img img {
+    height: 60vh; /* reduce height */
+  }
 }
 
-
+/* Tablets */
 @media (max-width: 768px) {
-    .mainsec-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 30px;
-        padding-inline: 10px;
-    }
+  .mainsec-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding-inline: 10px;
+  }
 
-    .mainsec-bgimg {
-        height: auto;
-        padding: 40px 0;
-    }
+  .mainsec-bgimg {
+    height: auto;
+    padding: 40px 0;
+  }
 
-    .mainsec-img img,
-    .mainsec1-img img {
-        width: 75%;
-        padding: 0;
-    }
+  .mainsec-img img,
+  .mainsec1-img img {
+    width: 75%;
+    height: auto; /* make it shrink naturally */
+  }
 
-    .mainsec-text h1 {
-        font-size: 24px;
-    }
+  .man1 img,
+  .new-imagess img {
+    max-width: 400px;
+    height: 250px;
+  }
 
-    .mainsec-text p {
-        font-size: 13px;
-    }
+  .mainsec-text h1 {
+    font-size: 24px;
+  }
 
-    .text-divparent h1 {
-        font-size: 26px;
-        line-height: 1.4;
-    }
+  .mainsec-text p {
+    font-size: 13px;
+  }
 
-    .text-divparent p {
-        font-size: 12.5px;
-    }
+  .text-divparent h1 {
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
+  .text-divparent p {
+    font-size: 12.5px;
+  }
 }
 
-/* Extra small mobile screens */
-@media (max-width: 480px) {
-    .mainsec-text h1 {
-        font-size: 20px;
-    }
+/* Mobile phones */
+@media screen and (max-width: 480px) {
+  .mainsec-text h1 {
+    font-size: 20px;
+  }
 
-    .mainsec-text p {
-        font-size: 12px;
-    }
+  .mainsec-text p {
+    font-size: 12px;
+  }
 
-    .text-divparent h1 {
-        font-size: 22px;
-    }
+  .text-divparent h1 {
+    font-size: 22px;
+  }
 
-    .text-divparent p {
-        font-size: 9px;
-        padding-inline: 10px;
-    }
-        .mainsec-img img, .mainsec1-img img {
-        width: 72%;}
+  .text-divparent p {
+    font-size: 10px;
+    padding-inline: 10px;
+  }
+
+
+  .new-imagess,
+  .man-images{
+    padding-top:30px;
+  }
+
+  .mainsec-img img,
+  .mainsec1-img img {
+    width: 85%;
+    height: auto;
+  }
+
+  .man1 img,
+  .new-imagess img {
+    max-width: 320px;
+    height: 200px;
+  }
 }

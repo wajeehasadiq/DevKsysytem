@@ -1,3 +1,22 @@
+
+/* Hover effect only */
+.ceoimg img:hover,
+.ceo1img img:hover {
+  transform: scale(1.07); /* smooth zoom */
+  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.8); /* deeper shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+/* Button hover effect */
+.grow-btn button:hover {
+  transform: scale(1.08);
+  background-color: #ffdb4d; /* lighter yellow */
+  box-shadow: 0 0 20px rgba(255, 204, 36, 0.8);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
 .grow-sec-div{
     display: flex;
 }
